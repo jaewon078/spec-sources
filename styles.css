@@ -1,10 +1,14 @@
-#spec_logo {
+.spec_logo {
     
 }
 #box1 {
     width: 1293px;
     height: 144px;
+<<<<<<< HEAD
     background-color: #AFD7FA;
+=======
+    background-color:#AFD7FA;
+>>>>>>> 0ce6e421bfabd7bae21d90ac2dba9c3ac780ed33
 }
 
 #box2 {
