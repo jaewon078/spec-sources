@@ -24,3 +24,15 @@
     background-color:bisque;
 
 }
+
+#smallerwhitebox1 {
+    width: 306px;
+    height: 50px;
+    background-color: white;
+}
+
+#smallerwhitebox2 {
+    width: 306px;
+    height: 50px;
+    background-color: white;
+}
