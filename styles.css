@@ -25,13 +25,7 @@
 
 }
 
-#smallerwhitebox1 {
-    width: 306px;
-    height: 50px;
-    background-color: white;
-}
-
-#smallerwhitebox2 {
+#smallerwhitebox {
     width: 306px;
     height: 50px;
     background-color: white;
