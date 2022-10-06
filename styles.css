@@ -17,34 +17,10 @@ form {
     color: white;
 }
 
-<<<<<<< HEAD
 .whiteBoxMain {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1rem;
     margin: 1rem 0;
     border-radius: 15px;
-=======
-#box3 {
-    width: 1293px;
-    height: 107px;
-    background-color:bisque;
-
-}
-
-#box4 {
-    width: 1293px;
-    height: 107px;
-    background-color:bisque;
-
-}
-
-.smallerwhitebox {
-    margin: auto;
-    transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    width: 150px;
-    height: 50px;
-    background-color: white;
->>>>>>> e6e7ae0f6ca1858a5b6243cb5c3e1bc22dd20b24
 }
