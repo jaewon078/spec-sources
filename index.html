@@ -1,27 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./styles.css">
-<style>
-</style>
-<script src=""></script>
-<body>
-<div id = "entire_screen">
-    <img id="spec_logo" style="max-width: 250px; height: auto; " src="https://clubs-cu.s3.amazonaws.com/Spectator+Publishing+Logo.png" alt="Spectator_Logo" style="width:100%" />
-    <h1> Spectator's Sources </h1>
+<html>
+    <head>
+        <title>Spec Sources</title>
 
-    <div id="box1">
-        <div><p>Source Name: </p></div>
-        <div class="smallerwhitebox"></div>
-        <div><p>Section Email: </p></div>
-        <div class="smallerwhitebox"></div>
-        <div id="greenbox"> 
-            <p>ADD</p>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="https://images.squarespace-cdn.com/content/53bf2a9be4b05a05f0bd263c/1484560744718-DP3TUIH6L91H0AONXPRG/Screen+Shot+2017-01-16+at+4.58.38+AM.png?content-type=image%2Fpng" height="80" alt="Spec Logo" />
+            <h1>Spectator's Sources</h1>
         </div>
-    </div>
-</div>>
-
-</body>
+        <div>
+            <form>
+                <span>Log your Sources:</span>
+                <span>
+                    <label for="name">Source Name:</label>
+                    <input type="text" id="name">
+                </span>
+                <span>
+                    <label for="email">Source Email:</label>
+                    <input type="email" id="email">
+                </span>
+                <button>Submit</button>
+            </form>
+            <hr>
+            <div class="whiteBoxMain">
+                <span>1:</span>
+                <span>Presbo</span>
+                <span>presbo@columbia.edu</span>
+                <button>Delete</button>
+            </div>
+            <hr>
+            <div class="whiteBoxMain">
+                <span>2:</span>
+                <span>John Jay Mouse</span>
+                <span>mouse@columbia.edu</span>
+                <button>Delete</button>
+            </div>
+            <hr>
+            <div class="whiteBoxMain">
+                <span>3:</span>
+                <span>Water Bottle Man</span>
+                <span>water@columbia.edu</span>
+                <button>Delete</button>
+            </div>
+        </div>
+    </body>
 </html>

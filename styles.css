@@ -1,39 +1,26 @@
-#entire_sceen {
-    background-color:#E5E5E5
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#box1 {
-    width: 1293px;
-    height: 144px;
-    background-color: #AFD7FA;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-#box2 {
-    width: 1293px;
-    height: 107px;
-    background-color:bisque;
-
+form {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: #60B3FB;
+    color: white;
 }
 
-#box3 {
-    width: 1293px;
-    height: 107px;
-    background-color:bisque;
-
-}
-
-#box4 {
-    width: 1293px;
-    height: 107px;
-    background-color:bisque;
-
-}
-
-.smallerwhitebox {
-    margin: auto;
-    transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    width: 306px;
-    height: 50px;
-    background-color: white;
+.whiteBoxMain {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    border-radius: 15px;
 }
