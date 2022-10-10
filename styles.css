@@ -27,13 +27,16 @@ form {
 
 .whiteBoxMain {
     display: flex;
-    justify-content: space-between;
+    
     padding: 1rem 1rem;
     margin: 1rem 0;
+    background-color: white;
     border-radius: 15px;
 }
 
 .dark_blue {
+    margin-left: 2rem;
+    margin-right: 10rem;
     color: 36476D;
     font-weight: bold;
     font-size: xx-large;
@@ -56,10 +59,12 @@ form {
 .email {
     color: 828EA6;
     font-size: xx-large;
+    margin-left: auto;
 }
 
 .red_button {
     background-color: FF7676;
+    margin-left: auto;
     color: white;
     border: none;
     padding: 5px;
@@ -79,4 +84,8 @@ form {
     font-weight: bold;
     font-size: large;
     border-radius:10px;
+}
+
+.authorName {
+    max-width: 20rem;
 }
