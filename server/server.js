@@ -1,15 +1,18 @@
-const db = require('./models')
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 var cors = require('cors');
 
+
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 const routes = require('./routes/routes.js');
+const db = require('./models')
 
-app.use(cors()); // Use this after the variable declaration
+app.use(cors());
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}.`);
@@ -28,12 +31,6 @@ app.use(function (req, res, next) {
 
 // routes
 app.use('/api/', routes);
-
-app.use(express.static(path.join(__dirname, './index.html')));
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.html'));
-});
 
 // Anything that doesn't match the above, send back index.html
 app.get('*', (req, res) => {

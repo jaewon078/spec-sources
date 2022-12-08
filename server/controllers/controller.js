@@ -1,20 +1,45 @@
-const data = require("../data")
+const data = require('../data');
+const sources = require('../models/SourceModel')
+
 module.exports = {
     hello: (req, res) => {
-        res.json({"message": "Hello World!"});
+        res.json({"message": "hello"});
     },
-    get_source: (req, res) => {
-        //sources.find();
-        res.json({"message": "get_sources okay", data: data.sources})
+    add_source: (req, res) => {
+        sources.create(req.body)
+        .then(sourcesData =>{
+            console.log(sourcesData);
+            res.json({"message": "OK2", data: sourcesData});
+        })
+        .catch(err=>{
+            console.log(err);
+            res.json(err);
+        })
     },
-    add_source:(req, res) => {
-        data.sources.push(req.body.source);
-        res.json({"message": "add_source okay", data: data.sources});
+    sources: (req,res)=>{
+        sources.find({})
+        .then(sourcesData => {
+            console.log(sourcesData);
+            res.json({"message": "HELLO", data: sourcesData});
+        })
+        .catch(err=>{
+            console.log(err);
+            res.json(err);
+        })
+        
     },
-    delete_source:(req, res) => {
-        data.sources = data.sources.filter(s => s.id !== req.params.id);
-        res.json({"message": "delete_source okay", data: data.sources});
-    }
-
-
+    testing: (req,res) =>{
+        res.json({"message": "WORKING"})
+    },
+    delete_source: (req, res) => {
+        sources.findOneAndDelete({id: req.params.id})
+        .then(sourcesData =>{
+            console.log(sourcesData);
+            res.json({"message":"WORKING", data: sourcesData})
+        })
+        .catch(err=>{
+            console.log(err);
+            res.json(err);
+        })
+    },
 };

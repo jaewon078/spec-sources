@@ -8,6 +8,6 @@ const sourceSchema = new Schema({
     email: { type: String, required: true }
 });
 
-const sources = mongoose.model('spec_sources', YOUR_SCHEMA);
+const sources = mongoose.model('sources', sourceSchema);
 
 module.exports = sources;
