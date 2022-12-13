@@ -17,7 +17,7 @@ function ListItem({num, name, email, handleDelete}) {
           <span class="dark_blue">{num + 1}</span>
           <span class="dark_blue authorName">{name}</span>
           <span class="email">{email}</span>
-          <button class="red_button" onClick={() => handleDelete(num)}>DELETE</button>
+          <button class="red_button" onClick={() => handleDelete(name)}>DELETE</button>
         </div>
     );
 }

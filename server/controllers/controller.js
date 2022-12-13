@@ -8,8 +8,15 @@ module.exports = {
     add_source: (req, res) => {
         sources.create(req.body)
         .then(sourcesData =>{
-            console.log(sourcesData);
-            res.json({"message": "OK2", data: sourcesData});
+            sources.find({})
+            .then(sourcesData => {
+                console.log(sourcesData);
+                res.json({"message": "WORKING3", data: sourcesData});
+            })
+            .catch(err=>{
+                console.log(err);
+                res.json(err);
+            })
         })
         .catch(err=>{
             console.log(err);
@@ -32,12 +39,20 @@ module.exports = {
         res.json({"message": "WORKING"})
     },
     delete_source: (req, res) => {
-        sources.findOneAndDelete({id: req.params.id})
-        .then(sourcesData =>{
-            console.log(sourcesData);
-            res.json({"message":"WORKING", data: sourcesData})
+        console.log(req.params.id) // name not id
+        sources.findOneAndDelete({name: req.params.id})
+        .then(sourcesData => {
+            sources.find({})
+            .then(sourcesData => {
+                console.log(sourcesData);
+                res.json({"message": "WORKING2", data: sourcesData});
+            })
+            .catch(err=>{
+                console.log(err);
+                res.json(err);
+            })
         })
-        .catch(err=>{
+        .catch(err => {
             console.log(err);
             res.json(err);
         })
